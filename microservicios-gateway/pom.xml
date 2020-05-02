@@ -8,40 +8,25 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.formacionbdi.microservicios.app.cursos</groupId>
-	<artifactId>microservicios-cursos</artifactId>
+	<groupId>com.formacionbdi.microservicios.app.gateway</groupId>
+	<artifactId>microservicios-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>microservicios-cursos</name>
+	<name>microservicios-gateway</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>13</java.version>
+		<java.version>14</java.version>
 		<spring-cloud.version>Hoxton.SR3</spring-cloud.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>com.formacionbdi.microservicios.commons-examenes</groupId>
-			<artifactId>commons-examenes</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>		
-		<dependency>
-			<groupId>com.formacionbdi.microservicios.commons-alumnos</groupId>
-			<artifactId>commons-alumnos</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.formacionbdi.microservicios.commons</groupId>
-			<artifactId>commons-microservicios</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -55,11 +40,6 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -69,14 +49,6 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
 		</dependency>
 	</dependencies>
 
