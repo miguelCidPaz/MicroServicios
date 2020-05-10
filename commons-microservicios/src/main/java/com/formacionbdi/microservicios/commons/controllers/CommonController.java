@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.formacionbdi.microservicios.commons.services.CommonService;
 
+//@CrossOrigin({"http://localhost:4200"})
 public class CommonController<E, S extends CommonService<E>> {
 	
 	@Autowired

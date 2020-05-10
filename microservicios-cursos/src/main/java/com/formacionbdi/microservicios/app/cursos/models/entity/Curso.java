@@ -32,7 +32,7 @@ public class Curso {
 	private Long id;
 	
 	@NotEmpty
-	private String name;
+	private String nombre;
 	
 	@Column(name="create_at")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -68,12 +68,12 @@ public class Curso {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public Date getCreateAt() {

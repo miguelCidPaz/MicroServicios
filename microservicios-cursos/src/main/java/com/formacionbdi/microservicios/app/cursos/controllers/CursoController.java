@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -95,14 +97,14 @@ public class CursoController extends CommonController<Curso, CursoService>{
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<?> editar (@RequestBody Curso curso, @PathVariable Long id){
+	public ResponseEntity<?> editar (@Valid @RequestBody Curso curso, @PathVariable Long id){
 	
 		Optional<Curso>o = this.service.findById(id);
 		if(!o.isPresent()) {
 			return ResponseEntity.notFound().build();
 		}
 		Curso dbCurso = o.get();
-		dbCurso.setName(curso.getName());
+		dbCurso.setNombre(curso.getNombre());
 		return ResponseEntity.status(HttpStatus.CREATED).body(this.service.save(dbCurso));
 	}
 
